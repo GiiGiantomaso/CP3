@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="../css/calculadora.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora de IMC</h1>
+    </header>
+
+    <div class="container">
+      <div id="calc-container">
+        <h2>Calculadora de Índice de Massa Corporal (IMC)</h2>
+        <p>
+          O Índice de Massa Corporal (IMC) é uma medida que permite avaliar se o seu peso está adequado em relação à
+          sua altura. Ele é um indicador importante para identificar possíveis problemas de saúde relacionados ao peso.
+        </p>
+        <p class="separador">
+          Para calcular o seu IMC, basta preencher os campos abaixo com a sua altura e peso e clicar no botão "Calcular".
+        </p>
+        <form id="imc-form">
+          <div class="form-inputs">
+            <div class="form-control">
+              <label for="altura">Altura:</label>
+              <input
+                type="text"
+                name="altura"
+                id="altura"
+                placeholder="Exemplo 1,75"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="peso">Peso:</label>
+              <input
+                type="text"
+                name="peso"
+                id="peso"
+                placeholder="Exemplo 70,5 KG"
+              />
+            </div>
+            <div class="form-control">
+              <label for="gender">Gênero:</label>
+              <select id="gender" name="gender" required>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                
+              </select>
+            </div>
+          </div>
+          <div class="action-control">
+            <button id="calc-btn">Calcular</button>
+            <button id="clear-btn">Limpar</button>
+          </div>
+        </form>
+      </div>
+      <div id="result-container" class="hide">
+        <p id="imc-number">Seu IMC: <span></span></p>
+        <p id="imc-info">Situação atual: <span></span></p>
+        <h3>Confira as classificações</h3>
+        <div id="imc-table">
+          <div class="table-header">
+            <h4>IMC</h4>
+            <h4>Classificação</h4>
+            <h4>Obesidade</h4>
+          </div>
+        </div>
+        <button id="back-btn">Voltar</button>
+      </div>
+    </div>
+
+    <footer>
+      <p class="texto-footer">
+        Esta calculadora é apenas uma ferramenta de referência e não substitui a consulta a um profissional de saúde.
+        Sempre consulte um médico para obter uma avaliação completa e personalizada do seu estado de saúde.
+      </p>
+    </footer>
+  </body>
+</html>
